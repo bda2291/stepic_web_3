@@ -1,0 +1,22 @@
+
+server {
+	listen 80;
+
+	location ^~ /uploads/ {
+		root /home/jedi/web;
+
+		location ~*  ^[^\.]+$  {
+			return 404;
+        	}
+
+
+	}
+	
+
+
+	location ~* ^.+\..+$ {
+		root /home/jedi/web/img;
+	}
+
+
+}
