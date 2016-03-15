@@ -5,7 +5,7 @@ from django.views.decorators.http import require_GET
 from django.core.paginator import Paginator, EmptyPage
 from django.http import HttpResponseRedirect
 
-from models import Question
+from models import Question, User
 
 def paginate(request, qs):
     LIMIT = 10  # objects at one page
